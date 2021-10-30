@@ -34,10 +34,7 @@ function createCard(id, name, price, img) {
     card.appendChild(title_card);
     card.appendChild(img_card);
     card.appendChild(footer_card);
-
-
-    main_market.appendChild(card);    
-    
+    main_market.appendChild(card);        
 }
 
 function renderCards() {
