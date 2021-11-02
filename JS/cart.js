@@ -1,4 +1,7 @@
 const table_products = document.querySelector('#table-products');
+const cart = [];
+
+// ------------------------------------Forma 1 -----------------------------------------
 
 // function add_to_cart() {
 //   products.forEach(product =>{
@@ -47,6 +50,8 @@ const table_products = document.querySelector('#table-products');
 //   }); 
 // }    
 
+// ------------------------------------Forma 2 -----------------------------------------
+
 function addCart() {
   products.forEach(product => {
     table_products.innerHTML = table_products.innerHTML +
@@ -62,8 +67,21 @@ function addCart() {
         <td><button class="clear-cart"><img src="../Images/Trash.png" alt="Clear" class="img-trash"></button></td>
       </tr>
     `});
-
-  
 }
 
-addCart();
+function addToCart(event) {  
+  const current_id = event.target.id;
+  console.log(current_id);
+  products.forEach(element => {    
+    if (current_id == element.id) {      
+      console.log(element.id);
+      cart.push(element);
+    }    
+  });  
+}
+
+// function renderCart() {
+//   cart.forEach(card=>{
+//     element
+//   });
+// }

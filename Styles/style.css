@@ -44,15 +44,17 @@ nav {
   align-self: flex-end;
 }
 
-#btn-cart {
-  background: #fff;
+/* .btn-cart {
+  background: #010955;
+  color: #3e8996;
   border: none;
   border-radius: 0.5rem;
   padding: 0.5rem;
   font-size: 1rem;
   margin-right: 1rem;
-  display: flex;  
-}
+  display: flex; 
+  cursor: pointer; 
+} */
 
 .fa-cart-plus {
   cursor: pointer;
@@ -226,7 +228,7 @@ nav {
   font-family: 'Roboto', sans-serif;
 }
 
-#btn-add  {
+.btn-add  {
   font-family: Courier New;
   color: #ffffff;
   font-size: 1rem;
@@ -236,11 +238,19 @@ nav {
   box-shadow: 0px 5px 3px #666666;
   text-shadow: 1px 1px 3px #666666;
   border: solid #736e71 2px;
-  background: -webkit-gradient(linear, 0 0, 0 100%, from(#3fbffa), to(#3e8996));  
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#010544), to(#1f50f1));  
   cursor: pointer;
   width: 10rem;
   height: 2.5rem;
   margin-top: 0.5rem;
+}
+
+.btn-add:hover,
+.btn-add:focus {
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#3e8996), to(#3fbffa));
+  border: solid #3e8996 2px;
+  box-shadow: 0px 5px 3px #3e8996;
+  text-shadow: 1px 1px 3px #3e8996;
 }
 
 #btn-add:hover {

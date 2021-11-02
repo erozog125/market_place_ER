@@ -22,8 +22,10 @@ function createCard(id, name, price, img) {
     p_price.textContent = price;
     p_price.setAttribute('id', 'p-price');
     const button_card = document.createElement('button');
+    button_card.classList.add('btn-add');
     button_card.textContent = 'Add to cart';
-    button_card.setAttribute('id', 'btn-add');
+    button_card.setAttribute('id', id);
+    button_card.addEventListener('click', addToCart);
 
  
     title_card.appendChild(p_title);
