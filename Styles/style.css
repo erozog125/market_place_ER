@@ -44,7 +44,7 @@ nav {
   align-self: flex-end;
 }
 
-/* .btn-cart {
+.btn-cart { 
   background: #010955;
   color: #3e8996;
   border: none;
@@ -54,7 +54,7 @@ nav {
   margin-right: 1rem;
   display: flex; 
   cursor: pointer; 
-} */
+}
 
 .fa-cart-plus {
   cursor: pointer;

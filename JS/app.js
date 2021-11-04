@@ -1,4 +1,6 @@
 const main_market = document.getElementById('main-market');
+const table_products = document.querySelector('#table-products');
+const cart = [];
 
 function createCard(id, name, price, img) {
 
@@ -44,6 +46,31 @@ function renderCards() {
         createCard(product.id, product.name, product.price, product.img);
     });
 }
+
+function addToCart(event) {
+    const current_card = event.target.id;
+    products.forEach(card=> {
+        if (current_card == card.id) {
+            render_cart(card.name,card.price);
+        }
+    });
+}
+
+function render_cart(name,price) {
+    table_products.innerHTML = table_products.innerHTML +
+       ` <tr>
+           <td>${name}</td>
+           <td>${price}</td>        
+           <td class="td-quantity">
+             <button class="substract-cart">-</button>
+               <p id="p_quantity">${0}</p>
+            <button class="add-cart">+</button>
+           </td>
+           <td>0</td>
+           <td><button class="clear-cart"><img src="../Images/Trash.png" alt="Clear" class="img-trash"></button></td>
+         </tr>
+    `};
+
 
 renderCards();
 

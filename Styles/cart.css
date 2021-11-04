@@ -39,6 +39,7 @@ body {
   background-color: #d9dedf;  
   font-size: 1rem;  
   padding: 0.2rem 1rem;
+  text-align: center;
 }
 
 .cart-list table td {  
@@ -49,8 +50,8 @@ body {
 }
 
 th,tr,td {
-  width: 5rem; 
-  text-align: center; 
+  width: 8rem; 
+  text-align: center;  
 }
 
 .substract-cart,

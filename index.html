@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
   <link rel="stylesheet" href="Styles/style.css">
+  <link rel="stylesheet" href="Styles/cart.css">
   <link rel="shortcut icon" href="Images/house.png" type="image/x-icon">
   <title>Market place - ER</title>
 </head>
@@ -32,9 +33,20 @@
     </div>
   </section>
   <main id="main-market"></main>
+  <div class="cart-list">
+    <table id="table-products">
+      <tr>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>SubTotal</th>                        
+        <th>Clear</th>                        
+      </tr>      
+    </table>
+    <div class="result"><label for="">Total a pagar</label><p id="result"></p></div>
+  </div>
   <footer>Edwin Rozo Gómez - Software Developer</footer>
-  <script src="JS/products.js"></script>
-  <script src="JS/cart.js"></script>
+  <script src="JS/products.js"></script>  
   <script src="JS/app.js"></script>
 </body>
 </html>
