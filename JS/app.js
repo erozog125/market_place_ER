@@ -51,21 +51,27 @@ function renderCards() {
 function addToCart(event) {
     const current_card = event.target.id;
     products.forEach(card=> {
-        if (current_card == card.id) {            
-            render_cart(card.name,card.price);
-            cart.push(card);
+        if (current_card == card.id) { 
+            console.log(cart);           
+            console.log(cart.indexOf(card));           
+            if (cart.indexOf(card) === 1) {
+                console.log('Ya agregaron este elemento');
+            } else {
+                cart.push(card);
+                render_cart(card.name, card.price, 1);
+            }
         }
     });
 }
 
-function render_cart(name,price) {
+function render_cart(name,price,quantity) {
     table_products.innerHTML = table_products.innerHTML +
        ` <tr>
            <td>${name}</td>
            <td>${price}</td>        
            <td class="td-quantity">
              <button class="substract-cart">-</button>
-               <p id="p_quantity">${0}</p>
+               <p id="p_quantity">${quantity}</p>
             <button class="add-cart">+</button>
            </td>
            <td>0</td>
