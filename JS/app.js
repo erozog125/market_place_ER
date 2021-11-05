@@ -41,6 +41,7 @@ function createCard(id, name, price, img) {
     main_market.appendChild(card);        
 }
 
+renderCards();
 function renderCards() {
     products.forEach(product => {
         createCard(product.id, product.name, product.price, product.img);
@@ -50,8 +51,9 @@ function renderCards() {
 function addToCart(event) {
     const current_card = event.target.id;
     products.forEach(card=> {
-        if (current_card == card.id) {
+        if (current_card == card.id) {            
             render_cart(card.name,card.price);
+            cart.push(card);
         }
     });
 }
@@ -69,9 +71,5 @@ function render_cart(name,price) {
            <td>0</td>
            <td><button class="clear-cart"><img src="../Images/Trash.png" alt="Clear" class="img-trash"></button></td>
          </tr>
-    `};
-
-
-renderCards();
-
-
+    `; console.log(cart);
+};
